@@ -1,0 +1,308 @@
+/* Diseño básico y accesible */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Asegura que los elementos estén alineados a la izquierda */
+    text-align: center; /* Cambia a 'left' para alinear el texto a la izquierda */
+    position: fixed; /* Fija el header en la parte superior */
+    width: 100%; /* Hace que el header ocupe todo el ancho de la ventana */
+    top: 0; /* Fija el header al borde superior */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+header img {
+    max-width: 150px; /* Ajusta el tamaño del logo aquí */
+    height: 150px;
+    padding: 0px 80px 0px 0px;
+    margin: 0;
+}
+
+header #navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 100px;
+    margin-top: 40px; /* Añade margen arriba si es necesario */
+}
+
+header h1 {
+    margin: 0;
+    padding-bottom: 20px;
+    text-align: center; /* Asegura que el texto esté alineado a la izquierda */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav ul li {
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:focus, nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding-top: 200px; /* Añade un relleno superior para evitar que el contenido se superponga con el header */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:focus, button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+header img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+section img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Estilos para la sección del menú */
+#menu ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#menu ul li h3 {
+    color: #4CAF50;
+    margin-bottom: 0.5em;
+}
+
+#menu ul li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#menu ul li p {
+    margin-top: 0.5em;
+    font-size: 0.9em;
+    color: #666;
+}
+/* Estilos para la tabla del menú */
+#tabla-menu {
+    margin-top: 2em;
+}
+
+#tabla-menu h2 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+#tabla-menu table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#tabla-menu th, #tabla-menu td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#tabla-menu th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+}
+
+#tabla-menu tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabla-menu tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para la sección del video */
+.video-container {
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente */
+    padding: 1em 0; /* Añade un espacio arriba y abajo del video */
+}
+
+.video-container iframe {
+    width: 80%; /* Ajusta el ancho del video según tu necesidad */
+    max-width: 640px; /* Establece un ancho máximo para el video */
+    height: 360px; /* Ajusta la altura del video */
+    border-radius: 8px;
+}
+
+/* Estilos para la sección de ubicación */
+
+#ubicacion {
+    margin-top: 2em;
+}
+
+#ubicacion img{
+    width: 70%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/*codigo resposivo*/
+/* Estilos para pantallas medianas (tablets) */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    header img {
+        max-width: 100px;
+        height: auto;
+        padding: 0;
+        margin-bottom: 1em;
+    }
+
+    header #navegacion {
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 0.5em;
+    }
+
+    main {
+        padding-top: 250px;
+    }
+
+    #menu ul {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Estilos para pantallas pequeñas (smartphones) */
+@media screen and (max-width: 480px) {
+    header {
+        position: static;
+    }
+
+    main {
+        padding-top: 1em;
+    }
+
+    #menu ul {
+        grid-template-columns: 1fr;
+    }
+
+    #tabla-menu table {
+        font-size: 0.9em;
+    }
+
+    .video-container iframe {
+        height: 240px;
+    }
+
+    #ubicacion img {
+        width: 100%;
+        height: auto;
+    }
+}
+

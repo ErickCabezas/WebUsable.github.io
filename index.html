@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Vegetariano Moni</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <header>
+        <img src="Img/LogoSaludableRestaurant.png" alt="Logo del restaurante con tonos grises">
+        <section id="navegacion">
+            <h1 tabindex="1">Restaurante Vegetariano Saludable</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" tabindex="0">Inicio</a></li>
+                    <li><a href="#menu" tabindex="0">Menú</a></li>
+                    <li><a href="#video" tabindex="0">Video</a></li>
+                    <li><a href="#ubicacion" tabindex="0">Ubicación</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main>
+        <section id="inicio" tabindex="0">
+            <h2 >Bienvenidos a Nuestro Restaurante</h2>
+            <p>Disfruta de la mejor comida vegetariana en un ambiente acogedor.</p>
+            <img src="Img/ImagenDeInicio.jpg" alt="imagen de un plato de comida saludable que representa al restaurante" tabindex="0">
+        </section>
+
+        <section id="menu" tabindex="0">
+            <h2>Menú</h2>
+            <ul>
+                <li>
+                    <h3>Ensalada Verde</h3>
+                    <img src="Img/ensalada-verde.jpg" alt="Imagen de la ensalada verde compuesta de lechuga, tomate y cebolla">
+                </li>
+                <li>
+                    <h3>Tofu a la Parrilla</h3>
+                    <img src="Img/Tofu a la Parrilla.jpg" alt="Imagen del plato Tofu a la parrilla">
+                </li>
+                <li>
+                    <h3>Lasagna de Vegetales</h3>
+                    <img src="Img/Lasagna de Vegetales.jpg" alt="Imagen del plato lasagna de vegetales que tiene un aspecto delicioso">
+                </li>
+                <li>
+                    <h3>Postres Veganos</h3>
+                    <img src="Img/Postres Veganos.jpg" alt="Imagen de un ejemplo de postre vegano">
+                </li>
+            </ul>
+        </section>
+
+        <section id="tabla-menu">
+            <h2 tabindex="0">Detalles del Menú</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th tabindex="0">Nombre del Plato</th>
+                        <th tabindex="0">Ingredientes</th>
+                        <th tabindex="0">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td tabindex="0">Ensalada Verde</td>
+                        <td tabindex="0">Lechuga, tomate, cebolla</td>
+                        <td tabindex="0">$5.00</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="0">Tofu a la Parrilla</td>
+                        <td tabindex="0">Tofu, arroz, especias</td>
+                        <td tabindex="0">$7.50</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="0">Lasagna de Vegetales</td>
+                        <td tabindex="0">Pasta, vegetales, salsa de tomate</td>
+                        <td tabindex="0">$8.00</td>
+                    </tr>
+                    <tr>
+                        <td tabindex="0">Postres Veganos</td>
+                        <td tabindex="0">Harina, azúcar, frutas</td>
+                        <td tabindex="0">$4.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="video" tabindex="0">
+            <h2>Aprende más sobre los beneficios de la comida vegetariana</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/h4VhhKztWrU?si=4JcJG-avnZ1ySscv" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="ubicacion" tabindex="0">
+            <h2>Ubicación</h2>
+            <p>Nos encontramos en Carcelen, Juan Campuzano y Jose Ordoñes, Quito, Ecuador.</p>
+            <img src="Img/Ubicación.png" alt="Imagen de Ubicación, Quito, Carcelen, Juan Campuzano y Jose Ordoñes">
+            <a href="https://maps.app.goo.gl/ZaBHQHy4GBCMa4bW6" tabindex="0">Google Maps</a>
+        </section>
+    </main>
+
+    <footer>
+        <p tabindex="0">&copy; 2024 Restaurante Vegetariano Saludable. Todos los derechos reservados.</p>
+        <p tabindex="0">cel: 0998729934</p>
+        <p tabindex="0">e-mail: saludablerestaurant@gmail.com</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const primerElemento = document.querySelector('[tabindex="1"]');
+            if (primerElemento) {
+                primerElemento.focus();
+            }
+        });
+    </script>
+</body>
+</html>
+
